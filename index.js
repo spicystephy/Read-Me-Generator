@@ -73,12 +73,12 @@ inquirer
       name: "questions",
       choices: "questions",
     },
-  ]);
+  ])
 
   .then((data) => {
     console.log(data);
     //store name of file in const
-    const filename = `myREADME.md`;
+    const filename = "myREADME.md";
     //save information to the file
     fs.writeFile(filename, createMarkdown(data),
       (err) => (err ? console.log(err) : console.log("README created!"))
@@ -113,23 +113,7 @@ ${data.testInstructions}
 
 ### Questions
 ${data.questions} ${data.email} or through GitHub at ${data.username}`;
-}
+};
 
 // Function call to initialize app
 init();
-
-//FOR HOMEWORK
-//   .then((data) => {
-//     const stringifyData = JSon.stringify(data,null,2)
-//     fs.writeFile("readme.md", convertToMarkdown(stringifyData), () =>
-//     err ? console.log(err) : console.log("Woohoo"));
-//   });
-
-//  function convertToMarkdown(data){
-//      var objData = JSON.parse(data)
-//      console.log("data:", objData.communications)
-//      return objData.username + " " + objData.communications
-//}
-//convert the data into a markdown strong here
-//using strings, template literals, etc...
-//  }
